@@ -17,6 +17,10 @@ add_action( 'wp_enqueue_scripts', 'bootstrapstarter_enqueue_scripts' );
 function bootstrapstarter_wp_setup() {
     add_theme_support( 'title-tag' );
 }
-
+if ( function_exists( 'add_theme_support' ) ) { 
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 500, 500); // default Post Thumbnail dimensions (cropped)
+	add_image_size( 'custom-image-thumb', 200, 200,true );
+}
 add_action( 'after_setup_theme', 'bootstrapstarter_wp_setup' );
 ?>
