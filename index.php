@@ -5,10 +5,14 @@
 		<?php if ( have_posts() ) { while ( have_posts() ) : the_post();?>
 			
 			<div class="col-md-4">
-				<?php echo $image = get_the_post_thumbnail($post_id, 'custom-image-thumb'); ?>
-				<?php the_content(); ?>
-				<button type="button" class="btn btn-link">Link</button>
-			</div>
+
+					<a class="img-thumbnail" href="<?php the_permalink(); ?>" alt="Lights" style="width: 100%">
+        			<?php the_post_thumbnail(); ?>
+					</a>
+					<?php the_content(); ?>
+				</div>
+					
+
 	<?php
 	$i++;
 endwhile;
