@@ -5,15 +5,12 @@
 		<?php if ( have_posts() ) { while ( have_posts() ) : the_post();?>
 			
 			<div class="col-md-4" >
-
-				<div class="card">
- 					<a href="<?php the_permalink(); ?>" class="card-img-top">
+				
+				<div class="img-thumbnail img-fluid">
+ 					<a href="<?php the_permalink(); ?>" class="img-fluid img-responsive">
        					<?php the_post_thumbnail( 'image_size', array( 'class' => 'img-responsive img-fluid') ); ?>
 					</a>
-					<div class="card-body">
-    					<p class="card-text"><?php the_content(); ?></p>
-  					</div>
-					
+					<?php the_content(); ?>
 					
 			</div>
 		</div>

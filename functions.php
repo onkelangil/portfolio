@@ -19,8 +19,9 @@ function bootstrapstarter_wp_setup() {
 }
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 100, 100, $cropped); // default Post Thumbnail dimensions (cropped)
+    set_post_thumbnail_size( 500, 500, $cropped); // default Post Thumbnail dimensions (cropped)
 	add_image_size( 'custom-image-thumb', 200, 200,true );
+	add_image_size('image_size', 300, 150, $cropped);
 }
 add_action( 'after_setup_theme', 'bootstrapstarter_wp_setup' );
 ?>
