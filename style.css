@@ -19,6 +19,14 @@ body {
   /*padding-top: 20px;*/
   padding-bottom: 20px;
 }
+a {
+  color: #292b2c;
+}
+
+img {
+    width:100%;
+}
+
 
 .navbar {
   margin-bottom: 20px;
@@ -47,6 +55,9 @@ body {
 
 .thumbnail{
   width: 100%;
-  height: 50px
   overflow: hidden;
+}
+.featured-thumbnail img {
+max-width: 100%;
+height: auto !important;
 }
